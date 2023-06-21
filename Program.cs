@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -85,11 +85,15 @@ namespace exercicioAula09_Casa
             }
             if (opcao == 3)
             {
+                string texto = "";
+                for (int i = 0; i < vagas.Count; i++)
+                {
+                    string placa = vagas[i];
+                    string nome_tratado = $" [{placa}] ";
 
-
-                Console.WriteLine($"[{vagas[0]}] [{vagas[1]}] [{vagas[2]}] [{vagas[3]}] [{vagas[4]}]");
-
-
+                    texto += nome_tratado;
+                }
+                Console.WriteLine($"{texto}");
                 Console.ReadKey();
                 Console.Clear();
                 Main(null);
